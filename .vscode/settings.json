@@ -1,8 +1,7 @@
 {
-  "editor.formatOnSave": true,
-  "cSpell.words": [
-    "gtag"
-  ],
-//   "xo.enable": true,
-//   "xo.format.enable": true
+  "cSpell.words": ["gtag"],
+  "editor.formatOnSave": false,
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": true
+  }
 }

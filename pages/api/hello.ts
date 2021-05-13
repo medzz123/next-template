@@ -1,7 +1,9 @@
-import { NextApiRequest, NextApiResponse } from "next";
+import { NextApiRequest, NextApiResponse } from 'next';
 
-export default (req: NextApiRequest, res: NextApiResponse) => {
-  const { t } = req.query;
+const helloApi = (request: NextApiRequest, response: NextApiResponse) => {
+  const { t } = request.query;
 
-  return res.send({ t });
+  return response.send({ t });
 };
+
+export default helloApi;

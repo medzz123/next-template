@@ -1,11 +1,12 @@
-import { pageView } from "@lib/gtag";
-import Router from "next/router";
-import React, { Fragment } from "react";
-import "@theme/global.css";
-import type { AppProps } from "next/app";
-import Head from "next/head";
+import '@theme/global.css';
 
-Router.events.on("routeChangeComplete", (url) => pageView(url));
+import { pageView } from '@lib/gtag';
+import type { AppProps } from 'next/app';
+import Head from 'next/head';
+import Router from 'next/router';
+import React, { Fragment } from 'react';
+
+Router.events.on('routeChangeComplete', (url: string) => pageView(url));
 
 const MyApp = ({ Component, pageProps }: AppProps) => {
   return (

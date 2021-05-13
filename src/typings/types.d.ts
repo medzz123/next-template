@@ -1,5 +1,5 @@
 declare global {
   interface Window {
-    gtag: any;
+    gtag: unknown;
   }
 }

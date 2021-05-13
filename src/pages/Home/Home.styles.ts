@@ -1,19 +1,19 @@
-import { styled } from "@theme/config";
+import { styled } from '@theme/config';
 
-export const Text = styled("p", {
-  fontFamily: "$system",
-  color: "$hiContrast",
+export const Text = styled('p', {
+  fontFamily: '$system',
+  color: '$hiContrast',
 
   variants: {
     size: {
       1: {
-        fontSize: "$1",
+        fontSize: '$1',
       },
       2: {
-        fontSize: "$2",
+        fontSize: '$2',
       },
       3: {
-        fontSize: "$3",
+        fontSize: '$3',
       },
     },
   },
