@@ -25,6 +25,7 @@
       "@theme/*": ["./src/theme/*"],
       "@lib/*": ["src/lib/*"],
       "@typings/*": ["src/typings/*"],
+      "@test/*": ["__tests__/*"]
     }
   },
   "include": [
