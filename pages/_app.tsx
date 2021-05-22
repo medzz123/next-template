@@ -1,6 +1,7 @@
 import '@theme/icons.css';
 
 import ThemeSwitch from '@components/ThemeSwitch';
+import environment from '@lib/environment';
 import { pageView } from '@lib/gtag';
 import { darkTheme, globalStyles } from '@theme/config';
 import type { AppProps } from 'next/app';
@@ -9,7 +10,9 @@ import Router from 'next/router';
 import { ThemeProvider } from 'next-themes';
 import React, { Fragment } from 'react';
 
-Router.events.on('routeChangeComplete', (url: string) => pageView(url));
+if (!environment.isDebugBuild) {
+  Router.events.on('routeChangeComplete', (url: string) => pageView(url));
+}
 
 const MyApp = ({ Component, pageProps }: AppProps) => {
   globalStyles();

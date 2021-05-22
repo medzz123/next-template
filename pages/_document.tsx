@@ -29,11 +29,11 @@ export default class Document extends NextDocument<{ isProduction: boolean }> {
           <link
             rel="preload"
             as="style"
-            href="https://fonts.googleapis.com/css2?family=Inter:wght@200;400;500;600;700;900&display=swap"
+            href="https://fonts.googleapis.com/css2?family=Inter:wght@200;400;600;700;900&display=swap"
           />
           <link
             rel="stylesheet"
-            href="https://fonts.googleapis.com/css2?family=Inter:wght@200;400;500;600;700;900&display=swap"
+            href="https://fonts.googleapis.com/css2?family=Inter:wght@200;400;600;700;900&display=swap"
             media="print"
             // @ts-ignore
             onLoad="this.media='all'"
@@ -41,7 +41,7 @@ export default class Document extends NextDocument<{ isProduction: boolean }> {
           <noscript>
             <link
               rel="stylesheet"
-              href="https://fonts.googleapis.com/css2?family=Inter:wght@200;400;500;600;700;900&display=swap"
+              href="https://fonts.googleapis.com/css2?family=Inter:wght@200;400;600;700;900&display=swap"
             />
           </noscript>
 

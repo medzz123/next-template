@@ -1,18 +1,78 @@
 import { styled } from '@theme/config';
 
 export const TextContainer = styled('p', {
-  color: '$purple600',
-
+  margin: '$0',
+  lineHeight: '1.3',
   variants: {
-    size: {
-      1: {
-        fontSize: '$1',
+    level: {
+      normal: {
+        fontSize: '$normal',
       },
-      2: {
-        fontSize: '$2',
+      small: {
+        fontSize: '$small',
       },
-      3: {
-        fontSize: '$3',
+      info: {
+        fontSize: '$info',
+      },
+      h1: {
+        fontSize: '$h1',
+      },
+      h2: {
+        fontSize: '$h2',
+      },
+      h3: {
+        fontSize: '$h3',
+      },
+    },
+    weight: {
+      thin: {
+        fontWeight: '$thin',
+      },
+      normal: {
+        fontWeight: '$normal',
+      },
+      semiBold: {
+        fontWeight: '$semiBold',
+      },
+      bold: {
+        fontWeight: '$bold',
+      },
+      black: { fontWeight: '$black' },
+    },
+    color: {
+      success: {
+        color: '$success',
+      },
+      error: {
+        color: '$error',
+      },
+      info: {
+        color: '$main',
+      },
+      normal: {
+        color: '$text',
+      },
+    },
+    align: {
+      left: {
+        textAlign: 'left',
+      },
+      right: {
+        textAlign: 'right',
+      },
+      center: {
+        textAlign: 'center',
+      },
+    },
+    spacing: {
+      none: {
+        marginBottom: '$0',
+      },
+      small: {
+        marginBottom: '$16',
+      },
+      large: {
+        marginBottom: '$24',
       },
     },
   },

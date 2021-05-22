@@ -1,7 +1,8 @@
 import React from 'react';
 
-import { globalStyles } from '../src/theme/config';
+import { globalStyles, darkTheme } from '../src/theme/config';
 import '../src/theme//icons.css';
+import { ThemeProvider } from 'next-themes';
 
 /**
  * Providers that the components uses, global decorator added to all stories.
@@ -9,7 +10,15 @@ import '../src/theme//icons.css';
 const Providers = ({ children }) => {
   globalStyles();
 
-  return <div style={{ padding: 20 }}>{children}</div>;
+  return (
+    <ThemeProvider
+      attribute="class"
+      value={{ light: 'light-theme', dark: darkTheme.className }}
+      defaultTheme="system"
+    >
+      {children}
+    </ThemeProvider>
+  );
 };
 
 const providersDecorator = (storyFn) => <Providers>{storyFn()}</Providers>;

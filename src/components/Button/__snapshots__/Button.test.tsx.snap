@@ -3,8 +3,9 @@
 exports[`Button Test 1`] = `
 <div>
   <button
-    class="sxf40k1"
+    class="sxrr960"
     data-testid="button"
+    type="button"
   >
     Hello
   </button>

@@ -1,55 +1,23 @@
 import { createCss } from '@stitches/react';
 
+import { fontSizes, fontWeights } from './font';
+import { dark, light } from './palette';
+import { sizes } from './sizes';
+import { zIndices } from './zIndices';
+
 export const { css, styled, global, theme, getCssString } = createCss({
   theme: {
-    colors: {
-      hiContrast: 'hsl(206,10%,5%)',
-      loContrast: 'white',
-
-      gray100: 'hsl(206,22%,99%)',
-      gray200: 'hsl(206,12%,97%)',
-      gray300: 'hsl(206,11%,92%)',
-      gray400: 'hsl(206,10%,84%)',
-      gray500: 'hsl(206,10%,76%)',
-      gray600: 'hsl(206,10%,44%)',
-
-      purple100: 'hsl(252,100%,99%)',
-      purple200: 'hsl(252,100%,98%)',
-      purple300: 'hsl(252,100%,94%)',
-      purple400: 'hsl(252,75%,84%)',
-      purple500: 'hsl(252,78%,60%)',
-      purple600: 'hsl(252,80%,53%)',
-    },
-    space: {
-      1: '5px',
-      2: '10px',
-      3: '15px',
-      4: '20px',
-      5: '25px',
-      6: '35px',
-    },
-    sizes: {
-      1: '5px',
-      2: '10px',
-      3: '15px',
-      4: '20px',
-      5: '25px',
-      6: '35px',
-    },
-    fontSizes: {
-      1: '12px',
-      2: '13px',
-      3: '15px',
-      4: '17px',
-      5: '19px',
-      6: '21px',
-    },
+    colors: light,
+    sizes: sizes,
+    space: sizes,
+    fontSizes: fontSizes,
+    fontWeights: fontWeights,
     fonts: {
-      system: 'system-ui',
+      inter: 'Inter, system-ui',
     },
+    zIndices: zIndices,
   },
   utils: {
-    // Abbreviated margin properties
     m: () => (value) => ({
       marginTop: value,
       marginBottom: value,
@@ -76,20 +44,42 @@ export const { css, styled, global, theme, getCssString } = createCss({
       marginTop: value,
       marginBottom: value,
     }),
-
+    p: () => (value) => ({
+      paddingTop: value,
+      paddingBottom: value,
+      paddingLeft: value,
+      paddingRight: value,
+    }),
+    pt: () => (value) => ({
+      paddingTop: value,
+    }),
+    pr: () => (value) => ({
+      paddingRight: value,
+    }),
+    pb: () => (value) => ({
+      paddingBottom: value,
+    }),
+    pl: () => (value) => ({
+      paddingLeft: value,
+    }),
+    px: () => (value) => ({
+      paddingLeft: value,
+      paddingRight: value,
+    }),
+    py: () => (value) => ({
+      paddingTop: value,
+      paddingBottom: value,
+    }),
     size: () => (value) => ({
       width: value,
       height: value,
     }),
-
     linearGradient: () => (value) => ({
       backgroundImage: `linear-gradient(${value})`,
     }),
-
     br: () => (value) => ({
       borderRadius: value,
     }),
-
     center: () => (value) => ({
       display: 'flex',
       justifyContent: 'center',
@@ -97,31 +87,28 @@ export const { css, styled, global, theme, getCssString } = createCss({
       flexDirection: value,
     }),
   },
-
   media: {
-    bp1: '@media (min-width: 520px)',
-    bp2: '@media (min-width: 900px)',
+    bp375: '@media (min-width: 23.438rem)',
+    bp480: '@media (min-width: 30rem)',
+    bp768: '@media (min-width: 48rem)',
+    bp992: '@media (min-width: 62rem)',
+    bp1024: '@media (min-width: 64rem)',
+    bp1280: '@media (min-width: 80rem)',
+    bp1440: '@media (min-width: 90rem)',
+    bp1680: '@media (min-width: 105rem)',
+    bp1920: '@media (min-width: 120rem)',
+    bp2560: '@media (min-width: 160rem)',
   },
 });
 
 export const globalStyles = global({
   '*, ::before, ::after': { boxSizing: 'border-box' },
-  body: { margin: 0, backgroundColor: '$loContrast' },
+  body: { margin: 0, backgroundColor: '$background' },
   html: {
-    fontFamily: 'Inter, sans-serif',
+    fontFamily: '$inter',
   },
 });
 
 export const darkTheme = theme({
-  colors: {
-    hiContrast: 'hsl(206,2%,93%)',
-    loContrast: 'hsl(206,8%,8%)',
-
-    gray100: 'hsl(206,8%,12%)',
-    gray200: 'hsl(206,7%,14%)',
-    gray300: 'hsl(206,7%,15%)',
-    gray400: 'hsl(206,7%,24%)',
-    gray500: 'hsl(206,7%,30%)',
-    gray600: 'hsl(206,5%,53%)',
-  },
+  colors: dark,
 });

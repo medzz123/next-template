@@ -1,10 +1,30 @@
+import { FontSizes, FontWeights } from '@theme/font';
+
 export interface TextProps {
   /**
-   * Always add js docs comments so storybook creates auto docs  for us
-   **/
-  uga?: string;
+   * Type of element
+   */
+  variant?: TextVariant;
   /**
-   * Always add js docs comments so storybook creates auto docs  for us
-   **/
-  buga?: string;
+   * Replaces default variant
+   */
+  level?: FontSizes;
+  /**
+   * Font weight
+   */
+  weight?: FontWeights;
+  /**
+   * Color
+   */
+  color?: 'error' | 'success' | 'normal' | 'info';
+  /**
+   * Text Align
+   */
+  align?: 'left' | 'right' | 'center';
+  /**
+   * Margin Bottom
+   */
+  mb?: 'none' | 'small' | 'large';
 }
+
+export type TextVariant = 'p' | 'span' | 'h1' | 'h2' | 'h3';
