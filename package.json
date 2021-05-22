@@ -10,7 +10,7 @@
     "test:unit": "jest",
     "lint:fix": "yarn test:lint --fix",
     "test": "run-s test:*",
-    "test:int": "eslint '*/**/*.{ts,tsx}'",
+    "test:lint": "eslint '*/**/*.{ts,tsx}'",
     "prepare": "husky install"
   },
   "dependencies": {

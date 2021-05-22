@@ -2,7 +2,7 @@ import { styled } from '@theme/config';
 
 export const Text = styled('p', {
   fontFamily: '$system',
-  color: '$hiContrast',
+  color: '$purple600',
 
   variants: {
     size: {

@@ -1,6 +1,5 @@
-import '@theme/global.css';
-
 import { pageView } from '@lib/gtag';
+import { globalStyles } from '@theme/config';
 import type { AppProps } from 'next/app';
 import Head from 'next/head';
 import Router from 'next/router';
@@ -9,6 +8,8 @@ import React, { Fragment } from 'react';
 Router.events.on('routeChangeComplete', (url: string) => pageView(url));
 
 const MyApp = ({ Component, pageProps }: AppProps) => {
+  globalStyles();
+
   return (
     <Fragment>
       <Head>

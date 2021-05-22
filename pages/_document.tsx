@@ -44,6 +44,7 @@ export default class Document extends NextDocument<{ isProduction: boolean }> {
               />
             </Fragment>
           )}
+
           <style id="stitches" dangerouslySetInnerHTML={{ __html: getCssString() }} />
         </Head>
         <body>
