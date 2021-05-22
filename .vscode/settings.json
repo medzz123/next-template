@@ -1,5 +1,9 @@
 {
-  "cSpell.words": ["gtag"],
+  "cSpell.words": [
+    "buga",
+    "gtag",
+    "testid"
+  ],
   "editor.formatOnSave": false,
   "editor.codeActionsOnSave": {
     "source.fixAll.eslint": true

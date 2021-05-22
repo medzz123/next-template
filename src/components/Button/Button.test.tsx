@@ -1,4 +1,4 @@
-import { render } from '@test/testUtils';
+import { render } from '@test/library';
 import React from 'react';
 
 import Button from './Button';
