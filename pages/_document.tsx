@@ -13,12 +13,6 @@ export default class Document extends NextDocument<{ isProduction: boolean }> {
       return {
         ...initialProps,
         isProduction,
-        styles: (
-          <>
-            {initialProps.styles}
-            <style id="stitches" dangerouslySetInnerHTML={{ __html: getCssString() }} />
-          </>
-        ),
       };
     } finally {
       // Do nothing
@@ -50,6 +44,7 @@ export default class Document extends NextDocument<{ isProduction: boolean }> {
               />
             </Fragment>
           )}
+          <style id="stitches" dangerouslySetInnerHTML={{ __html: getCssString() }} />
         </Head>
         <body>
           <Main />

@@ -1,4 +1,16 @@
-import { createCss } from '@stitches/react';
+import { createCss, global } from '@stitches/react';
+
+export const globalStyles = global({
+  '*': { boxSizing: 'border-box' },
+  body: {
+    margin: 0,
+    padding: 0,
+  },
+  html: {
+    margin: 0,
+    padding: 0,
+  },
+});
 
 export const { styled, getCssString } = createCss({
   theme: {
