@@ -1,3 +1,1 @@
-export const boo = {
-  hello: 'hi',
-};
+export { default } from './Text';

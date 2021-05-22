@@ -75,4 +75,7 @@ export const { css, styled, global, getCssString } = createCss({
 export const globalStyles = global({
   '*, ::before, ::after': { boxSizing: 'border-box' },
   body: { margin: 0 },
+  html: {
+    fontFamily: 'Inter, sans-serif',
+  },
 });

@@ -1,4 +1,5 @@
-import { Text } from './Home.styles';
+import Text from '@components/Text';
+import React from 'react';
 
 export default function Home() {
   return (
@@ -6,9 +7,7 @@ export default function Home() {
       <main>
         <h1 className="title">Hello new app</h1>
 
-        <Text as="h1" size="3">
-          Styled text
-        </Text>
+        <Text>Styled text</Text>
       </main>
     </div>
   );

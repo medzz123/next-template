@@ -1,7 +1,6 @@
 import { styled } from '@theme/config';
 
-export const Text = styled('p', {
-  fontFamily: '$system',
+export const TextContainer = styled('p', {
   color: '$purple600',
 
   variants: {
