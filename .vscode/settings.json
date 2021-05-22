@@ -4,6 +4,7 @@
     "buga",
     "gtag",
     "preconnect",
+    "svgr",
     "testid"
   ],
   "editor.formatOnSave": false,
