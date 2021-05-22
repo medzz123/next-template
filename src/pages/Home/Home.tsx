@@ -1,26 +1,29 @@
 import Button from '@components/Button';
 import Text from '@components/Text';
+import { NextPage } from 'next';
 import { useRouter } from 'next/router';
 import React from 'react';
 
-export default function Home() {
+import { HomeContainer, HomeContent } from './Home.styles';
+
+const Home: NextPage = () => {
   const router = useRouter();
 
   return (
-    <div className="container">
-      <main>
-        <Text variant="h1">Hello new app</Text>
-
-        <Text>Styled text</Text>
+    <HomeContainer>
+      <HomeContent>
+        <Text variant="h1">Home Page</Text>
 
         <Button
           onClick={() => {
             router.push('/about');
           }}
         >
-          About Page
+          About
         </Button>
-      </main>
-    </div>
+      </HomeContent>
+    </HomeContainer>
   );
-}
+};
+
+export default Home;

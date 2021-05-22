@@ -19,6 +19,7 @@
   },
   "dependencies": {
     "@stitches/react": "^0.1.9",
+    "lodash": "^4.17.21",
     "next": "^10.2.2",
     "next-themes": "^0.0.14",
     "react": "17.0.2",
@@ -38,6 +39,7 @@
     "@testing-library/react-hooks": "^5.1.2",
     "@testing-library/user-event": "^13.1.9",
     "@types/jest": "^26.0.23",
+    "@types/lodash": "^4.14.170",
     "@types/node": "^15.0.3",
     "@types/react": "^17.0.5",
     "@typescript-eslint/eslint-plugin": "^4.23.0",

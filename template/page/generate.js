@@ -27,7 +27,7 @@ module.exports.setGenerator = function (plop) {
         },
         {
           type: 'add',
-          path: 'pages/{{pascalCase name}}.ts',
+          path: 'pages/{{kebabCase name}}.ts',
           templateFile: 'template/page/templates/next.hbs',
         },
         {

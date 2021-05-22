@@ -1,15 +1,29 @@
-import { Text } from './About.styles';
+import Button from '@components/Button';
+import Text from '@components/Text';
+import { NextPage } from 'next';
+import { useRouter } from 'next/router';
+import React from 'react';
 
-export default function About() {
+import { AboutContainer, AboutContent } from './About.styles';
+
+const About: NextPage = () => {
+  const router = useRouter();
+
   return (
-    <div className="container">
-      <main>
-        <h1 className="title">About Page</h1>
+    <AboutContainer>
+      <AboutContent>
+        <Text variant="h1">About page</Text>
 
-        <Text as="h1" size="3">
-          Styled text
-        </Text>
-      </main>
-    </div>
+        <Button
+          onClick={() => {
+            router.push('/');
+          }}
+        >
+          Back to home
+        </Button>
+      </AboutContent>
+    </AboutContainer>
   );
-}
+};
+
+export default About;
