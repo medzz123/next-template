@@ -10,4 +10,4 @@ export default {
 
 const Template: Story = (storyArguments) => <ThemeSwitch {...storyArguments} />;
 
-export const ThemeSwitchStory = Template.bind({});
+export const Default = Template.bind({});

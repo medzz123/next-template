@@ -1,8 +1,11 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Should render button 1`] = `
+exports[`Button Test 1`] = `
 <div>
-  <button>
+  <button
+    class="sxf40k1"
+    data-testid="button"
+  >
     Hello
   </button>
 </div>

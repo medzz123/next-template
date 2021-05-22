@@ -10,4 +10,4 @@ export default {
 
 const Template: Story = (storyArguments) => <Text {...storyArguments}>Hello</Text>;
 
-export const TextStory = Template.bind({});
+export const Default = Template.bind({});

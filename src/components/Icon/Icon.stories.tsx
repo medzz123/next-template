@@ -8,6 +8,6 @@ export default {
   component: Icon,
 } as Meta;
 
-const Template: Story = (storyArguments) => <Icon name="story" {...storyArguments} />;
+const Template: Story = (storyArguments) => <Icon name="sun" {...storyArguments} />;
 
-export const IconStory = Template.bind({});
+export const Default = Template.bind({});

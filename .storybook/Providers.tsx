@@ -1,6 +1,7 @@
 import React from 'react';
 
 import { globalStyles } from '../src/theme/config';
+import '../src/theme//icons.css';
 
 /**
  * Providers that the components uses, global decorator added to all stories.
