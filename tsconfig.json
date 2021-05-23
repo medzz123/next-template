@@ -21,6 +21,7 @@
       "@theme/*": ["./src/theme/*"],
       "@lib/*": ["src/lib/*"],
       "@typings/*": ["src/typings/*"],
+      "@domain/*": ["src/domain/*"],
       "@test/*": ["__tests__/*"]
     }
   },

@@ -1,13 +1,16 @@
 import Button from '@components/Button';
 import Text from '@components/Text';
+import { getTodos } from '@domain/todos';
 import { NextPage } from 'next';
 import { useRouter } from 'next/router';
 import React from 'react';
 
-import { HomeContainer, HomeContent } from './Home.styles';
+import { HomeContainer, HomeContent, TodoCard } from './Home.styles';
 
 const Home: NextPage = () => {
   const router = useRouter();
+
+  const { data: todos } = getTodos();
 
   return (
     <HomeContainer>
@@ -21,6 +24,16 @@ const Home: NextPage = () => {
         >
           About
         </Button>
+
+        {todos &&
+          todos.map((todo) => (
+            <TodoCard key={`${todo.id}-${todo.userId}`}>
+              <Text>Title: {todo.title}</Text>
+              <Text>Completed: {String(todo.completed)}</Text>
+              <Text>Id: {todo.id}</Text>
+              <Text>UserId: {todo.userId}</Text>
+            </TodoCard>
+          ))}
       </HomeContent>
     </HomeContainer>
   );
