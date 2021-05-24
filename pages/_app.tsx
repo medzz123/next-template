@@ -3,6 +3,7 @@ import '@theme/icons.css';
 import ThemeSwitch from '@components/ThemeSwitch';
 import environment from '@lib/environment';
 import { pageView } from '@lib/gtag';
+import { IdProvider } from '@radix-ui/react-id';
 import { darkTheme, globalStyles } from '@theme/config';
 import type { AppProps } from 'next/app';
 import Head from 'next/head';
@@ -31,19 +32,21 @@ const MyApp = ({ Component, pageProps }: AppProps) => {
         <title>Template</title>
         <meta name="description" content="Template Generator" />
       </Head>
-      <ThemeProvider
-        attribute="class"
-        value={{ light: 'light-theme', dark: darkTheme.className }}
-        defaultTheme="system"
-      >
-        <QueryClientProvider client={queryClientRef.current}>
-          <Hydrate state={pageProps.dehydratedState}>
-            <Component {...pageProps} />
-            <ReactQueryDevtools initialIsOpen={false} />
-          </Hydrate>
-        </QueryClientProvider>
-        <ThemeSwitch />
-      </ThemeProvider>
+      <IdProvider>
+        <ThemeProvider
+          attribute="class"
+          value={{ light: 'light-theme', dark: darkTheme.className }}
+          defaultTheme="system"
+        >
+          <QueryClientProvider client={queryClientRef.current}>
+            <Hydrate state={pageProps.dehydratedState}>
+              <Component {...pageProps} />
+              <ReactQueryDevtools initialIsOpen={false} />
+            </Hydrate>
+          </QueryClientProvider>
+          <ThemeSwitch />
+        </ThemeProvider>
+      </IdProvider>
     </Fragment>
   );
 };
